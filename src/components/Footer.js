@@ -62,15 +62,16 @@ const Footer = () => {
                 <Link className="text-white py-2 mb-1">Refund Policy</Link>
                 <Link className="text-white py-2 mb-1">Shipping Policy</Link>
                 <Link className="text-white py-2 mb-1">Terms & Conditions</Link>
-                <Link className="text-white py-2 mb-1">Blogs</Link>
+
               </div>
             </div>
             <div className="col-3">
               <h4 className="mb-4 text-white">Account</h4>
               <div className="footer-links d-flex flex-column">
                 <Link className="text-white py-2 mb-1">About Us</Link>
-                <Link className="text-white py-2 mb-1">FAQ</Link>
-                <Link className="text-white py-2 mb-1">Contact</Link>
+                <Link className="text-white py-2 mb-1">FAQs</Link>
+                <Link className="text-white py-2 mb-1">Contacts</Link>
+                <Link className="text-white py-2 mb-1">Blogs</Link>
               </div>
             </div>
             <div className="col-2">
@@ -89,7 +90,7 @@ const Footer = () => {
         <div className="container-xxl">
           <div className="row">
             <div className="col-12 mb-0 text-white">
-              <p className="text-center">&copy; {new Date().getFullYear()} | Powered by HMart</p>
+              <p className="text-center">&copy; {new Date().getFullYear()} | Powered by HMart.</p>
             </div>
           </div>
         </div>
