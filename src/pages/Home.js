@@ -210,12 +210,42 @@ const Home = () => {
         <div className='container-xxl'>
           <div className='row'>
             <div className='col-3'>
-              <div className='famous-card bg-dark position-relative'>
-                <img src='/images/famous-1.png' alt='famous'/>
+              <div className='famous-card position-relative'>
+                <img src='/images/famous-1.png' className='img-fluid' alt='famous'/>
                 <div className='famous-content position-absolute'>
-                  <h5>Big Screen</h5>
+                  <h5>BIG SCREEN</h5>
                   <h6>Smart Watch Series 7</h6>
                   <p>From $399</p>
+                </div>
+              </div>
+            </div>
+            <div className='col-3'>
+              <div className='famous-card position-relative'>
+                <img src='/images/famous-2.png' className='img-fluid' alt='famous'/>
+                <div className='famous-content-black position-absolute'>
+                  <h5>STUDIO DISPLAY</h5>
+                  <h6>600 nits of brightness</h6>
+                  <p>27-inch 5K Retina display</p>
+                </div>
+              </div>
+            </div>
+            <div className='col-3'>
+              <div className='famous-card position-relative'>
+                <img src='/images/famous-3.png' className='img-fluid' alt='famous'/>
+                <div className='famous-content-black position-absolute'>
+                  <h5>SMARTPHONES</h5>
+                  <h6>Smartphone 15 Pro</h6>
+                  <p>From $999</p>
+                </div>
+              </div>
+            </div>
+            <div className='col-3'>
+              <div className='famous-card position-relative'>
+                <img src='/images/famous-4.png' className='img-fluid' alt='famous'/>
+                <div className='famous-content-black position-absolute'>
+                  <h5>HOME SPEAKERS</h5>
+                  <h6>Room-filling sound</h6>
+                  <p>From $599</p>
                 </div>
               </div>
             </div>
