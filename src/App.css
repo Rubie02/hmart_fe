@@ -456,4 +456,60 @@ footer .input-group-text {
   margin-bottom: 20px;
 }
 
+.filter-card ul,
+.filter-card .form-check-label {
+  list-style-type: none;
+  font-size: 13px;
+  line-height: 30px;
+  color: var(--color-777777);
+  cursor: pointer;
+}
+
+.filter-card .form-check-input:focus {
+  box-shadow: none;
+}
+
+.filter-card .form-check-input:checked {
+  background-color: var(--color-3b4149);
+  border-color: var(--color-3b4149);
+}
+.sub-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-1c1c1b);
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.colors li {
+  width: 20px;
+  height: 20px;
+  background-color: #febd69;
+  border-radius: 50%;
+}
+
+.colors .color-1 {
+  background-color: #bf4800;
+}
+
+.colors .color-2 {
+  background-color: #232f3e;
+}
+
+.colors {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.random-products h5 {
+  font-size: 14px;
+  margin-bottom: 8px;
+  margin-top: 10px;
+}
+
+.random-products {
+  border: 1px solid var(--color-ededed);
+}
 /* Our Store */
