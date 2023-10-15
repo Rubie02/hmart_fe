@@ -29,6 +29,9 @@ const ProductCard = (props) => {
             value={4}
             activeColor="#ffd700"
           />
+          <p className={`description ${grid===12 ? "d-block" : "d-none"}`}>
+          Products with electrical plugs are designed for use in the US. Outlets and voltage differ internationally and this product may require an adapter or converter for use in your destination.
+          </p>
           <p className='price'>$99.99</p>
         </div>
         <div className='action-bar position-absolute'>
@@ -66,6 +69,9 @@ const ProductCard = (props) => {
             value={4}
             activeColor="#ffd700"
           />
+          <p className={`description ${grid===12 ? "d-block" : "d-none"}`}>
+          Products with electrical plugs are designed for use in the US. Outlets and voltage differ internationally and this product may require an adapter or converter for use in your destination.
+          </p>
           <p className='price'>$99.99</p>
         </div>
         <div className='action-bar position-absolute'>

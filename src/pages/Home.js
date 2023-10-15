@@ -204,6 +204,7 @@ const Home = () => {
             <SpecialProduct />
             <SpecialProduct />
             <SpecialProduct />
+            <SpecialProduct />
           </div>
         </div>
       </section>
@@ -263,8 +264,6 @@ const Home = () => {
             </div>
             <ProductCard />
             <ProductCard />
-            <ProductCard />
-            <ProductCard />
           </div>
         </div>
       </section>
@@ -275,8 +274,6 @@ const Home = () => {
             <div className='col-12'>
               <h3 className='section-heading'>Featured Collections</h3>
             </div>
-            <ProductCard />
-            <ProductCard />
             <ProductCard />
             <ProductCard />
           </div>
@@ -326,10 +323,20 @@ const Home = () => {
             <div className='col-12'>
               <h3 className='section-heading'>Our Latest Blogs</h3>
             </div>
-            <BlogCard />
-            <BlogCard />
-            <BlogCard />
-            <BlogCard />
+            <div className='row'>
+              <div className='col-3'>
+                <BlogCard />
+              </div>
+              <div className='col-3'>
+                <BlogCard />
+              </div>
+              <div className='col-3'>
+                <BlogCard />
+              </div>
+              <div className='col-3'>
+                <BlogCard />
+              </div>
+            </div>
           </div>
         </div>
 
