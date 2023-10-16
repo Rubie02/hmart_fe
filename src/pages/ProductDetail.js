@@ -3,8 +3,10 @@ import BreadCrumb from '../components/BreadCrumb'
 import Meta from '../components/Meta'
 import ProductCard from '../components/ProductCard'
 import ReactStars from "react-rating-stars-component"
+import ReactImageZoom from "react-image-zoom"
 
 const ProductDetail = () => {
+  const props = { width: 600, height: 500, zoomWidth: 500, img: "/images/product-details-1.jpg"}
   const [orderedProduct, setOrderProduct] = useState(true);
   return (
     <>
@@ -13,8 +15,65 @@ const ProductDetail = () => {
       <div className='main-product-wrapper py-5 home-wrapper-2'>
         <div className='container-xxl'>
             <div className='row'>
-                <div className='col-6'></div>
-                <div className='col-6'></div>
+                <div className='col-6'>
+                    <div className='main-product-image'>
+                        <div>
+                            <ReactImageZoom {...props} />
+                        </div>
+                    </div>
+                    <div className='other-product-images d-flex flex-wrap gap-15'>
+                        <div>
+                            <img className='img-fluid' src='/images/product-details-1.jpg' alt='product-image' />
+                        </div>
+                        <div>
+                            <img className='img-fluid' src='/images/product-details-1.jpg' alt='product-image' />
+                        </div>
+                        <div>
+                            <img className='img-fluid' src='/images/product-details-1.jpg' alt='product-image' />
+                        </div>
+                        <div>
+                            <img className='img-fluid' src='/images/product-details-1.jpg' alt='product-image' />
+                        </div>
+                    </div>
+                </div>
+                <div className='col-6'>
+                    <div className='main-product-details'>
+                        <div className='border-bottom'>
+                            <h3 className='title'>Kids Headphone Bulk 10 Pack Multi Color For Students</h3>
+                        </div>
+                        <div className='border-bottom py-3'>
+                            <p className='price'>$100.00</p>
+                            <div className='d-flex align-items-center gap-10'>
+                            <ReactStars 
+                                count={5}
+                                size={24}
+                                value={4}
+                                activeColor="#ffd700"
+                            />
+                            <p className='mb-0 p-review'>(2 reviews)</p>
+                            </div>
+                            <a className='review-btn text-decoration-underline' href='#review'>Write a Review</a>
+                        </div>
+                        <div className='border-buttom py-3'>
+                            <div className='d-flex gap-10 align-items-center'>
+                                <h3 className='product-heading'>Type: </h3>
+                                <p className='product-data'>GDF</p>
+                            </div>
+                            <div className='d-flex gap-10 align-items-center'>
+                                <h3 className='product-heading'>Brand: </h3>
+                                <p className='product-data'>GDF</p>
+                            </div>
+                            <div className='d-flex gap-10 align-items-center'>
+                                <h3 className='product-heading'>Category: </h3>
+                                <p className='product-data'>GDF</p>
+                            </div>
+                            <div className='d-flex gap-10 align-items-center'>
+                                <h3 className='product-heading'>Tags: </h3>
+                                <p className='product-data'>GDF</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
       </div>
@@ -23,9 +82,10 @@ const ProductDetail = () => {
         <div className='container-xxl'>
             <div className='row'>
                 <div className='col-12'>
-                    <div className='bg-white p-3'>
                     <h4>Description</h4>
-                    <p className='bg-white p-3'>
+                    <div className='bg-white p-3'>
+                    
+                    <p>
                     Products with electrical plugs are designed for use in the US. Outlets and voltage differ internationally and this product may require an adapter or converter for use in your destination.
                     </p>
                     </div>
@@ -34,10 +94,11 @@ const ProductDetail = () => {
         </div>
       </div>
 
-      <section className='review-wrapper py-5 home-wrapper-2'>
+      <section className='review-wrapper home-wrapper-2'>
         <div className='container-xxl'>
             <div className='row'>
-                <div className='col-12'>
+                <div  id='review' className='col-12'>
+                    <h3>Reviews</h3>
                     <div className='review-inner-wrapper'>
                     <div className='review-head d-flex justify-content-between align-items-end'>
                         <div>
@@ -73,7 +134,7 @@ const ProductDetail = () => {
                     </div>
                   </form>
                     </div>
-                    <div className='reviews'>
+                    <div className='reviews mt-4'>
                         <div className='review'>
                             <div className='d-flex gap-10 align-items-center'>
                                 <h6 className='mb-0'>Johny Deepy</h6>
