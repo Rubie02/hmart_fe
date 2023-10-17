@@ -723,12 +723,13 @@ footer .input-group-text {
   color: var(--color-1c1c1b);
 }
 
-.auth-card .signup {
+.signup {
   background-color: var(--color-febd69);
   color: var(--color-131912);
+  border: none;
 }
 
-.auth-card .signup:hover {
+.signup:hover {
   background-color: var(--color-131912);
   color: white;
 }
@@ -834,6 +835,7 @@ footer .input-group-text {
   padding: 10px;
   background-color: white;
   border-radius: 5px;
+  z-index: 1000;
 }
 
 .main-product-details {
@@ -876,7 +878,12 @@ footer .input-group-text {
 
 .product-data {
   font-size: 13px;
-  color: var(--color-777777);
+  columns: var(--color-777777);
   margin-bottom: 0px;
+}
+
+.main-product-details a {
+  font-size: 14px;
+  color: var(--color-777777);
 }
 /* Product Details */
