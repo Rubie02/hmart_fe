@@ -4,7 +4,7 @@ import { BiArrowBack } from "react-icons/bi"
 const Checkout = () => {
   return (
     <>
-      <div className='checkout-wrapper py-2 home-wrapper-2'>
+      <div className='checkout-wrapper py-5 home-wrapper-2'>
         <div className='container-xxl'>
             <div className='row'>
                 <div className='col-7'>
@@ -21,7 +21,7 @@ const Checkout = () => {
                                 <li aria-current='page' className="breadcrumb-item active">
                                     Information
                                 </li> &nbsp; /
-                                <li className="breadcrumb-item">
+                                <li className="breadcrumb-item active">
                                     Shipping
                                 </li> &nbsp; /
                                 <li aria-current='page' className="breadcrumb-item active">
@@ -29,10 +29,11 @@ const Checkout = () => {
                                 </li>
                             </ol>
                         </nav>
-                        <h4 className="title">Contact Information</h4>
-                        <p className="user-details">
+                        <h4 className="title total">Contact Information</h4>
+                        <p className="user-details total">
                             Jonny Deppy (jnon2@gmail.com)
                         </p>
+                        {/* <h4 className="mb-3">Shipping Address</h4> */}
                         <form
                             action=""
                             className="d-flex gap-15 flex-wrap justify-content-between"
@@ -79,7 +80,7 @@ const Checkout = () => {
                             </div>
                             <div className="w-100">
                                 <div className="d-flex justify-content-between align-items-center">
-                                    <Link to='/cart'>
+                                    <Link to='/cart' className="total">
                                     <BiArrowBack />    Return to Cart</Link>
                                     <Link className="submit-button" to='cart'>Continue to Shipping</Link>
                                 </div>
@@ -87,7 +88,45 @@ const Checkout = () => {
                         </form>
                     </div>
                 </div>
-                <div className='col-5'></div>
+                <div className='col-5'>
+                    <div className="d-flex gap-10 mb-2 align-items-center">
+                    <div className="d-flex gap-10 w-75">
+                    <div className="w-25 position-relative">
+                        <span 
+                        style={{top: "-10px", right: "2px"}}
+                        className="badge bg-secondary p-2 text-white rounded-circle position-absolute">
+                            1
+                        </span>
+                        <img className="img-fluid" src="/images/watch.jpg" alt="watch" />
+
+                    </div>
+                    <div>
+                        <h5 className="total-price">
+                        Apple Watch Series 7
+                        </h5>
+                        <p className="total-price">hi</p>
+                        </div>
+                    </div>
+                    <div className="flex-grow-1">
+                        <h5 className="total">$100.00</h5>
+                    </div>
+                    </div>
+                    <div className="border-bottom py-4"></div>
+                    <div className="border-bottom py-4">
+                        <div className="d-flex justify-content-between align-items-center">
+                            <p className="total">SubTotal</p>
+                            <p className="total-price">$200.00</p>
+                        </div>
+                        <div className="d-flex justify-content-between align-items-center">
+                            <p className="mb-0 total">Shipping</p>
+                            <p className="mb-0 total-price">$00.00</p>
+                        </div>
+                    </div>
+                    <div className="d-flex justify-content-between align-items-center border-bottom py-5">
+                        <h4 className="total">Total</h4>
+                        <h5 className="total-price">$200.00</h5>
+                    </div>
+                </div>
             </div>
         </div>
       </div>
