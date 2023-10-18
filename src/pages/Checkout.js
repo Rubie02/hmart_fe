@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom"
 import { BiArrowBack } from "react-icons/bi"
+import Container from "../components/Container"
 
 const Checkout = () => {
   return (
     <>
-      <div className='checkout-wrapper py-5 home-wrapper-2'>
-        <div className='container-xxl'>
-            <div className='row'>
+      <Container class1='checkout-wrapper py-5 home-wrapper-2'>
+        <div className='row'>
                 <div className='col-7'>
                     <div className="checkout-left-data">
                         <h3 className="website-name">HMart</h3>
@@ -127,9 +127,8 @@ const Checkout = () => {
                         <h5 className="total-price">$200.00</h5>
                     </div>
                 </div>
-            </div>
         </div>
-      </div>
+      </Container>
     </>
   )
 }
