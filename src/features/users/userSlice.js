@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { authService } from "./userService";
+import { toast } from "react-toastify";
 
 export const register = createAsyncThunk("auth/register", async (user, thunkAPI) => {
     try {
@@ -19,7 +20,7 @@ const initialState = {
 
 export const authSlice = createSlice({
     name: "auth",
-    initialState: "",
+    initialState: initialState,
     reducers: {},
     extraReducers: (builder) => {
         builder.addCase(register.pending, (state) => {
@@ -28,11 +29,18 @@ export const authSlice = createSlice({
             state.isLoading = false;
             state.isError = false;
             state.isSuccess = true;
+            state.createdUser = action.payload;
+            if (state.isSuccess === true) {
+                toast.success("SignUp Successfully!");
+            }
         }).addCase(register.rejected, (state, action) => {
             state.isLoading = false;
             state.isError = true;
             state.isSuccess = false;
-            state.message = action.error
+            state.message = action.error;
+            if (state.isError === true) {
+                toast.error(action.error);
+            }
         })
     }
 })
