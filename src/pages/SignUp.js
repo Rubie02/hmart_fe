@@ -2,8 +2,32 @@ import BreadCrumb from '../components/BreadCrumb'
 import Container from '../components/Container'
 import Meta from '../components/Meta'
 import { Link } from 'react-router-dom'
+import { useFormik } from 'formik'
+import * as yup from 'yup'
+
+const REQUIRED_MESSAGE = "Required!";
+const EMAIL_SIGNUP_MESSAGE = "Email should be valid!";
+
+const signUpSchema = yup.object({
+    email: yup.string().nullable().email(EMAIL_SIGNUP_MESSAGE),
+    username: yup.string().required(REQUIRED_MESSAGE),
+    password: yup.string().required(REQUIRED_MESSAGE)
+})
 
 const SignUp = () => {
+
+    const formik = useFormik({
+        initialValues: {
+            email: "",
+            username: "",
+            password: ""
+        },
+        validationSchema: signUpSchema,
+        onSubmit: (values) => {
+            alert(JSON.stringify(values, null, 2));
+        }
+    })
+
     return (
         <>
             <Meta title={"HMart | Sign Up"} />
