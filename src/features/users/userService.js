@@ -8,6 +8,14 @@ const register = async(user) => {
     }
 }
 
+const login = async(user) => {
+    const response = await axios.post(`${base_url}users/login`, user);
+    if (response.data) {
+        return response.data;
+    }
+}
+
 export const authService = {
-    register
+    register,
+    login
 }

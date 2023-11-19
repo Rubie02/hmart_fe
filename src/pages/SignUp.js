@@ -18,7 +18,7 @@ const EMAIL_SIGNUP_MESSAGE = "Email should be valid!";
 const signUpSchema = yup.object({
     firstName: yup.string().required(REQUIRED_MESSAGE),
     lastName: yup.string().required(REQUIRED_MESSAGE),
-    email: yup.string().nullable().email(EMAIL_SIGNUP_MESSAGE),
+    email: yup.string().nullable().email(EMAIL_SIGNUP_MESSAGE).required(REQUIRED_MESSAGE),
     phoneNumber: yup.string().required(REQUIRED_MESSAGE),
     password: yup.string().required(REQUIRED_MESSAGE),
     confirmPassword: yup.string().required(REQUIRED_MESSAGE)
