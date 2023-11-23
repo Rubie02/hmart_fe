@@ -24,7 +24,7 @@ const ProductCard = (props) => {
                   </button>
                 </div>
                 <div className='product-image'>
-                  <img src='/images/watch.jpg' className="img-fluid" alt='product image' />
+                  <img src={item?.images[0].url} className="img-fluid" alt='product image' />
                   <img src='/images/tab.jpg' className="img-fluid" alt='product image' />
                 </div>
                 <div className='product-details'>
@@ -33,11 +33,13 @@ const ProductCard = (props) => {
                   <ReactStars
                     count={5}
                     size={24}
-                    value={item?.totalRating}
+                    value={item?.totalRating.toString()}
                     activeColor="#ffd700"
                   />
-                  <p className={`description ${grid === 12 ? "d-block" : "d-none"}`}>
-                    {item?.description}
+                  <p className={`description ${grid === 12 ? "d-block" : "d-none"}`}
+                    dangerouslySetInnerHTML={{__html: item?.description}}
+                  >
+                    
                   </p>
                   <p className='price'>$ {item?.price}</p>
                 </div>
